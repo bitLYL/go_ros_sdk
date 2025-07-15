@@ -1,6 +1,8 @@
 # go_ros_sdk
 基于go2_SDK和ROS1实现的宇树机器狗导航系统。通过改写SDK，实现了ROS1话题(IMU、机器人位姿、雷达)的发布，并构建了支持大模型语言控制的导航框架。系统支持两种导航方式：传统RVIZ目标点导航，以及通过大模型解析文本指令(如方向、距离)实现导航。文章详细说明了SDK安装、例程编译和导航框架部署的步骤，并提供了开源代码(GitHub: qoiu)。大模型部分采用本地知识库或API调用实现任务分解。该系统为go2机器狗提供了完整的ROS1导航解决方案。
 
+csdn详细教程：
+https://blog.csdn.net/qq_54038361/article/details/149361407?sharetype=blogdetail&sharerId=149361407&sharerefer=PC&sharesource=qq_54038361&spm=1011.2480.3001.8118
  ######SDK启动##########
  
  1.启动imu发布，位置发布，
