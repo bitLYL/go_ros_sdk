@@ -4,27 +4,43 @@
  ######SDK启动##########
  
  1.启动imu发布，位置发布，
+ 
   base_link->map 雷达发布节点
+  
   进入intiree_SDK2文件夹
+  
   cd build .cd bin
+  
   sudo ./go2_imu_pub_6
   
+  
  2.启动cmd_vel速度控制接口
+ 
   sudo ./go2_move_sub eth0
 
 3.雷达信息显示，
+
   进入intiree_SDK2文件夹
+  
   cd build .cd bin
+  
   sudo ./go2_lidar_pub3 eth0
+  
 
 ######传统rviz导航#####
+
 1.进入lyl_ws文件夹
+
 2.roslaunch robot_navigation robot_navigation.launch
+
 3.rviz 添加goal规划
 
 ######大模型类导航######
+
  1.进入lyl_ws文件夹
+ 
  roslaunch robot_llm robot_llm.launch  
+ 
  2.发布测试数据
  source ~/lyl_ws/devel/setup.bash
  rostopic pub /llm custom_msgs/MoveCommand "{x: 0.0, y: 0.0, direction: [4], distance: 0.7}" 
